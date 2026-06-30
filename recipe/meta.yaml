@@ -1,5 +1,5 @@
 {% set name = "sacc" %}
-{% set version = "2.2" %}
+{% set version = "2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 63930654ccff48e3c1736ea08b7c6fcfef976fe3f03de41620abb4550b229e03
+  sha256: 70aff1b0c73bb3eb98e55e64d5917b267416e8e2651ab2e863049b6ff3eac529
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
   script: {{ PYTHON }} -m pip install . -vv
